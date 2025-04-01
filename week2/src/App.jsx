@@ -1,14 +1,21 @@
 import "./App.css"; 
+import 'bootstrap/dist/css/bootstrap.min.css';
  
 export default function App() {
   return (
     <div>
       <header className="header">
-          <h1>My Profile</h1>
-          <p>나만의 웹사이트를 만들어봐요!</p>
+        <div className="intro-text">
+            <div className="intro-lead-in">
+                My Profile
+            </div>
+            <div className="intro-heading">
+                나만의 웹사이트를 만들어봐요!
+            </div>
+        </div>
       </header>
 
-      <nav className="nav">
+      <nav className="navbar fixed-top">
           <ul>
               <li><a href="#about">자기소개</a></li>
               <li><a href="#features">관심사</a></li>
