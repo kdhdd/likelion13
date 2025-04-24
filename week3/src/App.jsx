@@ -10,9 +10,9 @@ function App() {
   return (
     <div>
       <h1>Event handler practice</h1>
-      <input type="text" value={name} onChange={handleChange} />
+      <input type="text" value={name} onChange={handleChange}></input>
       <button onClick={() => alert(name)}>Button</button>
-      <h2>{name}</h2>
+      <h3>{name}</h3>
     </div>
   );
 }
