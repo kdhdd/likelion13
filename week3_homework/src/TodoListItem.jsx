@@ -24,6 +24,10 @@ const Button = styled.button`
   margin-left: auto;
 `;
 
+const Text = styled.span`
+  margin-left: 8px;
+`;
+
 function TodoListItem({ todo, onToggle, onRemove }) {
   const { id, text, checked } = todo;
 
@@ -31,7 +35,7 @@ function TodoListItem({ todo, onToggle, onRemove }) {
     <ItemBlock>
       <input type="checkbox" checked={checked} onChange={() => onToggle(id)} />
 
-      <span>{text}</span>
+      <Text>{text}</Text>
 
       <Button onClick={() => onRemove(id)}>삭제</Button>
     </ItemBlock>
