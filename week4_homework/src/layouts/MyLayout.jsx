@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGear } from "@fortawesome/free-solid-svg-icons";
 
 function MyLayout() {
   const storedName = localStorage.getItem("name") || "김도현";
@@ -14,7 +16,9 @@ function MyLayout() {
       <ProfileImage src={user.profileImage} alt="프로필 이미지" />
       <UserName>{user.name}</UserName>
       <UserEmail>{user.email}</UserEmail>
-      <Page to="/setting">설정</Page>
+      <Page to="/setting">
+        <FontAwesomeIcon icon={faGear} size="lg" />
+      </Page>
     </Container>
   );
 }
@@ -38,9 +42,11 @@ const ProfileImage = styled.img`
 const UserName = styled.h2`
   font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 0px;
 `;
 
 const UserEmail = styled.p`
+  margin-top: 0px;
   color: gray;
 `;
 
